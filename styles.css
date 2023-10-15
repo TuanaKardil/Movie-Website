@@ -1,0 +1,118 @@
+*{
+  text-decoration: none;
+}
+body{
+  font-family: 'Roboto Mono', monospace;
+  background-color: #6B728E;
+  color: white;
+}
+.all{
+  display: grid;
+  gap: 10px;
+}
+.top{
+  background-color: #404258;
+  text-align: center;
+  padding: 10px;
+}
+h1{
+  font-size: 4em;
+}
+.top>p{
+  font-size: 1.5em;
+}
+.title{
+  font-size: 1.5em;
+  padding-left: 20px;
+}
+.movie-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  margin: 20px;
+}
+.movie-box, #popular-movies-box, #now-playing-movies-box, #top-rated-movies-box, #upcoming-movies-box{
+  background-color: #50577A;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#movie-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  margin-top: 20px;
+  height: 130px;
+}
+#rating{
+  font-size: 1.2em;
+  margin: 0;
+  margin-bottom: 10px;
+  color: yellow;
+
+}
+#name{
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#image-box{
+  position: relative;
+}
+#text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Background color and opacity */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Transition effect for smooth fade-in/out kit*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+/* Style the text */
+#overview {
+  color: white; /* Text color */
+  font-size: 1em; /* Text size */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+  /* display: flex;
+  flex-direction: column; */
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+/* Hover effect */
+#image-box:hover #text-overlay {
+  opacity: 1; /* Show the text overlay on hover */
+}
+
+
+.popular-movies{
+  background-color: #404258;
+}
+.now-playing-movies{
+  background-color: #404258;
+}
+.top-rated-movies{
+  background-color: #404258;
+}
+.upcoming-movies{
+  background-color: #404258;
+}
